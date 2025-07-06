@@ -1,0 +1,146 @@
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .site-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111;
+  }
+
+  .nav-right a {
+    margin-left: 1.5rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+  }
+  .nav-right a:hover {
+    color: red;
+  }
+  
+  /* 介绍区域 */
+  .intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #fafafa;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5rem;
+  }
+  
+  .intro-text h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  .intro-text p {
+    margin: 0.2rem 0;
+    color: #555;
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;   /* ✅ 垂直方向与文字对齐（默认是 stretch） */
+    gap: 0.1rem;            /* ✅ 控制图标之间距离，推荐值：0.4 ~ 0.8rem */
+    margin-top: 0.8rem;
+  }
+  
+  .social-icons .icon {
+    width: 20px;            /* ✅ 可微调图标尺寸 */
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    vertical-align: middle; /* ✅ 避免轻微错位 */
+  }
+  
+  .social-icons .icon:hover {
+    opacity: 1;
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;   /* ✅ 保证图标在 a 标签内部也垂直居中 */
+  }  
+  
+  /* 项目卡片列表：每行3个 */
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  /* 保持图片 4:3 比例 */
+  .project-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 5px;
+    filter: grayscale(100%);               /* 默认灰度 */
+    transition: filter 0.3s ease-in-out;   /* 平滑过渡 */
+  }
+  
+  .project:hover .project-img {
+    filter: grayscale(0%);                 /* 悬停时彩色 */
+  }
+  
+  .project {
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 6px;
+  }
+  
+  .project:hover h3 {
+    color: red;
+    transition: color 0.2s ease;
+  }
+
+  .project h3 {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #4b0082;
+  }
+  
+  .tags {
+    font-size: 0.75rem;
+    color: #888;
+  }
+  
+  /* 页脚图标 */
+  footer {
+    padding: 2rem;
+    text-align: center;
+  }
+  .icon {
+    width: 24px;
+    margin: 0 0.5rem;
+    opacity: 0.7;
+  }
+  .icon:hover {
+    opacity: 1;
+  }
+  
+  
