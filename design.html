@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Qianyun Zhou</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 顶部导航栏 -->
+  <header class="top-header">
+    <div class="nav-left"><span class="site-name">Qianyun Zhou</span></div>
+    <nav class="nav-right">
+      <a href="index.html">ALL</a>
+      <a href="research.html">Research</a>
+      <a href="design.html" class="active">Design</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="project-list">
+    <!-- ExtremeDensity -->
+    <div class="project">
+      <a href="projects/ExtremeDensity/ExtremeDensity_detail.html">
+        <img src="projects/ExtremeDensity/ExtremeDensity_cover.jpg" alt="ExtremeDensity" class="project-img"/>
+        <h3>A review on AI applications for facades</h3>
+      </a>
+      <p>
+        A review of AI trends in façade research, methods and future potentials.
+      </p>
+      <span class="tags">research, review, topic modelling</span>
+    </div>
+  </main>  
+
+  <button id="scrollToTopBtn" title="Back to top">&#8593;</button>
+  <footer class="site-footer">
+    <p>&copy; 2025 Qianyun Zhou. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+  
+    // 显示按钮的触发阈值
+    window.addEventListener("scroll", () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
+  
+      // 当滚动接近底部 100px 时显示
+      if (scrollTop + clientHeight >= scrollHeight - 100) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    });
+  
+    // 点击按钮时回到顶部，并立即隐藏按钮
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      scrollBtn.style.display = "none";
+    });
+  </script>  
+
+</body>
+</html>

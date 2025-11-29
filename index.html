@@ -10,7 +10,7 @@
   <header class="top-header">
     <div class="nav-left"><span class="site-name">Qianyun Zhou</span></div>
     <nav class="nav-right">
-      <a href="index.html">ALL</a>
+      <a href="index.html" class="active">ALL</a>
       <a href="research.html">Research</a>
       <a href="design.html">Design</a>
       <a href="about.html">About</a>
@@ -50,6 +50,7 @@
         <h3>Segment4Solar v0.1</h3>
       </a>
       <p>Tool for photovoltaic placement on facades, integrating solar data.</p>
+      <span class="tags year">2021</span>
       <span class="tags">tool, research, deep learning</span>
     </div>
 
@@ -76,7 +77,96 @@
       </p>
       <span class="tags">research, simulation, urban design</span>
     </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <a href="projects/QingPuUrban/QingPuUrban_detail.html">
+        <img src="projects/QingPuUrban/QingPuUrban_cover.jpg" alt="QingPuUrban" class="project-img"/>
+        <h3>BIPV’s impact on outdoor comfort</h3>
+      </a>
+      <p>
+        A simulation-based study of photovoltaic facades and urban thermal environments.
+      </p>
+      <span class="tags">research, simulation, urban design</span>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <a href="projects/QingPuUrban/QingPuUrban_detail.html">
+        <img src="projects/QingPuUrban/QingPuUrban_cover.jpg" alt="QingPuUrban" class="project-img"/>
+        <h3>BIPV’s impact on outdoor comfort</h3>
+      </a>
+      <p>
+        A simulation-based study of photovoltaic facades and urban thermal environments.
+      </p>
+      <span class="tags">research, simulation, urban design</span>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <a href="projects/QingPuUrban/QingPuUrban_detail.html">
+        <img src="projects/QingPuUrban/QingPuUrban_cover.jpg" alt="QingPuUrban" class="project-img"/>
+        <h3>BIPV’s impact on outdoor comfort</h3>
+      </a>
+      <p>
+        A simulation-based study of photovoltaic facades and urban thermal environments.
+      </p>
+      <span class="tags">research, simulation, urban design</span>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <a href="projects/QingPuUrban/QingPuUrban_detail.html">
+        <img src="projects/QingPuUrban/QingPuUrban_cover.jpg" alt="QingPuUrban" class="project-img"/>
+        <h3>BIPV’s impact on outdoor comfort</h3>
+      </a>
+      <p>
+        A simulation-based study of photovoltaic facades and urban thermal environments.
+      </p>
+      <span class="tags">research, simulation, urban design</span>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <a href="projects/QingPuUrban/QingPuUrban_detail.html">
+        <img src="projects/QingPuUrban/QingPuUrban_cover.jpg" alt="QingPuUrban" class="project-img"/>
+        <h3>BIPV’s impact on outdoor comfort</h3>
+      </a>
+      <p>
+        A simulation-based study of photovoltaic facades and urban thermal environments.
+      </p>
+      <span class="tags">research, simulation, urban design</span>
+    </div>
   </main>
+   
+  <button id="scrollToTopBtn" title="Back to top">&#8593;</button>
+  <footer class="site-footer">
+    <p>&copy; 2025 Qianyun Zhou. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+  
+    // 显示按钮的触发阈值
+    window.addEventListener("scroll", () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
+  
+      // 当滚动接近底部 100px 时显示
+      if (scrollTop + clientHeight >= scrollHeight - 100) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    });
+  
+    // 点击按钮时回到顶部，并立即隐藏按钮
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      scrollBtn.style.display = "none";
+    });
+  </script>  
 
 </body>
 </html>

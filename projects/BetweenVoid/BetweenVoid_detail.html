@@ -1,16 +1,88 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Between Void</title>
-  <link rel="stylesheet" href="../../style.css">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Qianyun Zhou</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- 顶部导航栏 -->
+    <header class="top-header">
+      <div class="nav-left"><span class="site-name">Qianyun Zhou</span></div>
+      <nav class="nav-right">
+        <a href="index.html">ALL</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="design.html">Design</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
 <body>
-  <a href="../../index.html">← Back</a>
-  <h1>Segment4Solar v0.1</h1>
-  <p>
-    This tool detects building façade areas for solar PV. It integrates solar data and deep learning...
-  </p>
-  <img src="BetweenVoid_cover.jpg" alt="cover image">
-  <!-- 可插入更多图、段落、PDF链接等 -->
+  <!-- 返回链接 -->
+  <a href="../../index.html" class="back-link">← Back</a>
+
+  <!-- 主标题 -->
+  <h1 class="project-title">Segment4Solar v0.1</h1>
+
+  <!-- 大图 Overview -->
+  <div class="hero-image">
+    <img src="BetweenVoid_cover.jpg" alt="Overview image">
+  </div>
+
+  <!-- 简介段 -->
+  <section class="section-full-text">
+    <p>This tool detects building façade areas for solar PV. It integrates solar data and deep learning...</p>
+  </section>
+
+  <!-- 模板一：左图右文 -->
+  <section class="section-left-image">
+    <img src="your-image1.jpg" alt="description">
+    <div class="text">
+      <h2>Concept</h2>
+      <p>Explain your idea or method here...</p>
+    </div>
+  </section>
+
+  <!-- 模板二：一整段文字 -->
+  <section class="section-full-text">
+    <h2>Analysis</h2>
+    <p>Explain your result or analysis here...</p>
+  </section>
+
+  <!-- 模板三：一行两图 -->
+  <section class="section-two-images">
+    <img src="image1.jpg" alt="view 1">
+    <img src="image2.jpg" alt="view 2">
+  </section>
+
+  <button id="scrollToTopBtn" title="Back to top">&#8593;</button>
+  <footer class="site-footer">
+    <p>&copy; 2025 Qianyun Zhou. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+  
+    // 显示按钮的触发阈值
+    window.addEventListener("scroll", () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
+  
+      // 当滚动接近底部 100px 时显示
+      if (scrollTop + clientHeight >= scrollHeight - 100) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    });
+  
+    // 点击按钮时回到顶部，并立即隐藏按钮
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      scrollBtn.style.display = "none";
+    });
+  </script>  
+
 </body>
 </html>

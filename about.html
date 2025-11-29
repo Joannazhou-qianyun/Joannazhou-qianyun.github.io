@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Qianyun Zhou</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 顶部导航栏 -->
+  <header class="top-header">
+    <div class="nav-left"><span class="site-name">Qianyun Zhou</span></div>
+    <nav class="nav-right">
+      <a href="index.html">ALL</a>
+      <a href="research.html">Research</a>
+      <a href="design.html">Design</a>
+      <a href="about.html" class="active">About</a>
+    </nav>
+  </header>
+
+  <!-- 简介区域 -->
+  <section class="intro-section">
+    <img src="assets/profile.jpg" alt="Qianyun Zhou" class="profile-pic" />
+    <div class="intro-text">
+      <h2>PhD Student, Architecture & AI</h2>
+      <p>Passionate about design, sustainability, and intelligence in built environments.</p>
+      <p>Currently exploring generative tools for urban form, solar facades, and adaptive systems.</p>
+
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/your-profile" target="_blank">
+          <img src="assets/linkedin.png" alt="LinkedIn" class="icon" />
+        </a>
+        <a href="mailto:your@email.com">
+          <img src="assets/email.png" alt="Email" class="icon" />
+        </a>
+        <a href="https://github.com/your-github-username" target="_blank">
+          <img src="assets/github.png" alt="GitHub" class="icon" />
+        </a>
+        <a href="https://orcid.org/your-orcid-id" target="_blank">
+          <img src="assets/orcid.png" alt="ORCID" class="icon" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <button id="scrollToTopBtn" title="Back to top">&#8593;</button>
+  <footer class="site-footer">
+    <p>&copy; 2025 Qianyun Zhou. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+  
+    // 显示按钮的触发阈值
+    window.addEventListener("scroll", () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
+  
+      // 当滚动接近底部 100px 时显示
+      if (scrollTop + clientHeight >= scrollHeight - 100) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    });
+  
+    // 点击按钮时回到顶部，并立即隐藏按钮
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      scrollBtn.style.display = "none";
+    });
+  </script>  
+
+</body>
+</html>
